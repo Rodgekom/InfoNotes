@@ -10,9 +10,9 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add" Label="Add Note" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="Help" Label="Help" />
-            <AppBarButton Icon="Setting" Label="Settings" />
+            <AppBarButton Icon="Add" Label="Add Note" Click="AppBarButton_Add_Click"/>
+            <AppBarButton Icon="Help" Label="Help" Click="AppBarButton_Help_Click" />
+            <AppBarButton Icon="Setting" Label="Settings" Click="AppBarButton_Settings_Click" />
         </CommandBar>
     </Page.BottomAppBar>
 

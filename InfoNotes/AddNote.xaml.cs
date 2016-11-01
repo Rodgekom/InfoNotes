@@ -35,5 +35,17 @@ namespace InfoNotes
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ViewNotes));
+
+        }
     }
 }

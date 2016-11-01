@@ -47,11 +47,25 @@ namespace InfoNotes
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            Frame.Navigate(typeof(ViewNotes));
 
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private void AppBarButton_Add_Click(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(AddNote));
+
+        }
+
+        private void AppBarButton_Help_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Help));
+
+        }
+
+        private void AppBarButton_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SettingsPage));
 
         }
     }

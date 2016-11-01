@@ -55,3 +55,8 @@ c:\users\rodgekom\documents\visual studio 2015\Projects\InfoNotes\InfoNotes\obj\
 c:\users\rodgekom\documents\visual studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\qualifiers.txt.intermediate
 c:\users\rodgekom\documents\visual studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 c:\users\rodgekom\documents\visual studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\ProjectArchitectures.txt
+C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\ContactUs.xbf
+C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\ContactUs.g.i.cs
+C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\ContactUs.g.cs
+C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\ContactUs.xaml
+C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\ContactUs.xbf

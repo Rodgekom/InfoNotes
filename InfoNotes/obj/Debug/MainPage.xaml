@@ -10,9 +10,9 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:ConnectionId='1' Icon="Add" Label="Add Note"                           />
-            <AppBarButton Icon="Help" Label="Help" />
-            <AppBarButton Icon="Setting" Label="Settings" />
+            <AppBarButton x:ConnectionId='1' Icon="Add" Label="Add Note"                               />
+            <AppBarButton x:ConnectionId='2' Icon="Help" Label="Help"                                 />
+            <AppBarButton x:ConnectionId='3' Icon="Setting" Label="Settings"                                     />
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -26,7 +26,7 @@
                 Info Notes
             </TextBlock>
 
-            <ListView x:ConnectionId='2' ItemsSource="{Binding}" Grid.Row="1" SelectionMode="None" IsItemClickEnabled="True"                               >
+            <ListView x:ConnectionId='4' ItemsSource="{Binding}" Grid.Row="1" SelectionMode="None" IsItemClickEnabled="True"                               >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>

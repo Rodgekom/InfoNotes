@@ -88,6 +88,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactUs.xaml.cs">
+      <DependentUpon>ContactUs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditNote.xaml.cs">
       <DependentUpon>EditNote.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AddNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContactUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -35,5 +35,16 @@ namespace InfoNotes
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(EditNote));
+
+        }
+
+        private void btnPin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

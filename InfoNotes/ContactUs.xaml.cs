@@ -20,9 +20,9 @@ namespace InfoNotes
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Help : Page
+    public sealed partial class ContactUs : Page
     {
-        public Help()
+        public ContactUs()
         {
             this.InitializeComponent();
         }
@@ -34,13 +34,17 @@ namespace InfoNotes
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
 
         }
 
-       
-        private void btnMail_Click(object sender, RoutedEventArgs e)
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ContactUs));
+            Frame.Navigate(typeof(Help));
 
         }
     }

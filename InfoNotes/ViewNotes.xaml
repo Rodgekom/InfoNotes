@@ -11,8 +11,8 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:Name="btnEdit" Icon="Edit" Label="Edit" />
-            <AppBarButton x:Name="btnPin" Icon="Pin" Label="Pin" />
+            <AppBarButton x:Name="btnEdit" Icon="Edit" Label="Edit" Click="btnEdit_Click" />
+            <AppBarButton x:Name="btnPin" Icon="Pin" Label="Pin" Click="btnPin_Click"/>
         </CommandBar>
     </Page.BottomAppBar>
 

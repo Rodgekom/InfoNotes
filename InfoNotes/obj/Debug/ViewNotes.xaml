@@ -11,8 +11,8 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:Name="btnEdit" Icon="Edit" Label="Edit" />
-            <AppBarButton x:Name="btnPin" Icon="Pin" Label="Pin" />
+            <AppBarButton x:ConnectionId='1' x:Name="btnEdit" Icon="Edit" Label="Edit"                       />
+            <AppBarButton x:ConnectionId='2' x:Name="btnPin" Icon="Pin" Label="Pin"                     />
         </CommandBar>
     </Page.BottomAppBar>
 

@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:Name="btnSave" Icon="Accept" Label="Save" />
-            <AppBarButton x:Name="btnCancel" Icon="Cancel" Label="Cancel" />
+            <AppBarButton x:Name="btnSave" Icon="Accept" Label="Save" Click="btnSave_Click"/>
+            <AppBarButton x:Name="btnCancel" Icon="Cancel" Label="Cancel" Click="btnCancel_Click" />
         </CommandBar>
     </Page.BottomAppBar>
 

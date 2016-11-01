@@ -8,7 +8,34 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnMail" Icon="Mail" Label="Save" Click="btnMail_Click"/>
+            
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="10,0,10,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0.167">
+            <TextBlock Text="Help" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            
+            <TextBlock Text="" Style="{ThemeResource TitleTextBlockStyle}" Height="517" />
+           
+
+        </StackPanel>
+
 
     </Grid>
 </Page>
