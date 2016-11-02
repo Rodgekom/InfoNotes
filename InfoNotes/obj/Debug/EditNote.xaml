@@ -24,18 +24,25 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="19,0,0,0.167">
-            <TextBlock Text="Add Note" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        <StackPanel Grid.Row="0" Margin="1,0,0,492" Grid.RowSpan="3">
+            <TextBlock Text="Edit Note" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,12,0,0"/>
 
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
-            <TextBlock Text="Title:" Style="{ThemeResource TitleTextBlockStyle}" />
-            <TextBox x:Name="titleTextBox" TextWrapping="Wrap" Height="50" />
-            <TextBlock Text="Category:" Style="{ThemeResource TitleTextBlockStyle}" />
-            <ComboBox x:Name="comboBox"/>
-            <TextBlock Text="Description" Style="{ThemeResource TitleTextBlockStyle}" />
-            <TextBox x:Name="descriptionTextBox" TextWrapping="Wrap" Height="125" />
+        <StackPanel Grid.Row="1" Margin="0,75,0,89" Grid.RowSpan="2">
+            <TextBlock Text="Title:" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <TextBox x:Name="titleTextBox" TextWrapping="Wrap" Height="50" Text="{Binding Title}"/>
+            <TextBlock Text="Category:" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <ComboBox x:Name="ComboBoxMenu" PlaceholderText="select an item" FontSize="72">
+                <ComboBoxItem Content="Meeting" IsSelected="True"/>
+                <ComboBoxItem Content="Memo"/>
+                <ComboBoxItem Content="Reminder" />
+                <ComboBoxItem Content="Event"/>
+                <ComboBoxItem Content="Job"/>
+                <ComboBoxItem Content="Friends"/>
+            </ComboBox>
+            <TextBlock Text="Description" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <TextBox x:Name="descriptionTextBox" Text ="{Binding Content}" TextWrapping="Wrap" Height="157" />
 
         </StackPanel>
 

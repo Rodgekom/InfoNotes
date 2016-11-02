@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-A35P99P</Machine>
-    <WindowsUser>rodgekom</WindowsUser>
+    <Machine>ALMODAD</Machine>
+    <WindowsUser>Almodad</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
@@ -10,73 +10,97 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>de4ae687-02d8-4c15-ac08-019e5d402a9c</PackageIdentityName>
     <PackageIdentityPublisher>CN=rodgekom</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\obj\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\InfoNotes.exe">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\InfoNotes.exe">
       <PackagePath>InfoNotes.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\InfoNotes.exe.config">
+      <PackagePath>InfoNotes.exe.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\PortableRest.3.0.1\lib\portable-net45+sl5+wp8+win8+wpa81+MonoTouch1+MonoAndroid1\PortableRest.dll">
+      <PackagePath>PortableRest.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Microsoft.Net.Http.2.2.22\lib\wpa81\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Microsoft.Net.Http.2.2.22\lib\wpa81\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\map-marker-hi.png">
+      <PackagePath>Assets\map-marker-hi.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\InfoNotes.xr.xml">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\InfoNotes.xr.xml">
       <PackagePath>InfoNotes.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\AddNote.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\AddNote.xbf">
       <PackagePath>AddNote.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\ContactUs.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\ContactUs.xbf">
       <PackagePath>ContactUs.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\EditNote.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\EditNote.xbf">
       <PackagePath>EditNote.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\Help.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\Help.xbf">
       <PackagePath>Help.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\SettingsPage.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\ViewNotes.xbf">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\ViewNotes.xbf">
       <PackagePath>ViewNotes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

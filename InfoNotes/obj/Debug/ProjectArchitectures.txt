@@ -1,1 +1,1 @@
-C:\Users\rodgekom\Documents\Visual Studio 2015\Projects\InfoNotes\InfoNotes\InfoNotes.csproj;neutral
+F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\InfoNotes.csproj;neutral

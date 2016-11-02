@@ -23,18 +23,25 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="19,0,0,0.167">
-            <TextBlock Text="Add Note" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        <StackPanel Grid.Row="0" Margin="1,-14,0,509" Grid.RowSpan="3">
+            <TextBlock Text="Add Note" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,12,0.167,0" Height="70"/>
            
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
-            <TextBlock Text="Title:" Style="{ThemeResource TitleTextBlockStyle}" />
-            <TextBox x:Name="titleTextBox" TextWrapping="Wrap" Height="50" />
-            <TextBlock Text="Category:" Style="{ThemeResource TitleTextBlockStyle}" />
-            <ComboBox x:Name="comboBox"/>
-            <TextBlock Text="Description" Style="{ThemeResource TitleTextBlockStyle}" />
-            <TextBox x:Name="descriptionTextBox" TextWrapping="Wrap" Height="125" />
+        <StackPanel Grid.Row="1" Margin="0,50,0,110" Grid.RowSpan="2">
+            <TextBlock Text="Title:" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <TextBox x:Name="titleTextBox" TextWrapping="Wrap" Height="50" Text="{Binding Title, Mode=TwoWay}" />
+            <TextBlock Text="Category:" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <ComboBox x:Name="ComboBoxMenu" PlaceholderText="select an item" FontSize="22">
+                <ComboBoxItem Content="Meeting"/>
+                <ComboBoxItem Content="Memo"/>
+                <ComboBoxItem Content="Reminder" />
+                <ComboBoxItem Content="Event"/>
+                <ComboBoxItem Content="Job"/>
+                <ComboBoxItem Content="Friends"/>
+            </ComboBox>
+            <TextBlock Text="Description" Style="{ThemeResource TitleTextBlockStyle}" FontSize="24" Foreground="#FF46FDEC" />
+            <TextBox x:Name="descriptionTextBox" TextWrapping="Wrap" Height="147" Text="{Binding Content, Mode=TwoWay}"/>
            
         </StackPanel>
         

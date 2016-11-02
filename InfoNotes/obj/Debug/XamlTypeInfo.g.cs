@@ -124,27 +124,37 @@ namespace InfoNotes.InfoNotes_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[9];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "InfoNotes.AddNote";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "InfoNotes.ContactUs";
-            _typeNameTable[4] = "InfoNotes.EditNote";
-            _typeNameTable[5] = "InfoNotes.Help";
-            _typeNameTable[6] = "InfoNotes.MainPage";
-            _typeNameTable[7] = "InfoNotes.SettingsPage";
-            _typeNameTable[8] = "InfoNotes.ViewNotes";
+            _typeNameTable[3] = "InfoNotes.Common.NavigationHelper";
+            _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[5] = "InfoNotes.Common.ObservableDictionary";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "String";
+            _typeNameTable[8] = "InfoNotes.ContactUs";
+            _typeNameTable[9] = "InfoNotes.EditNote";
+            _typeNameTable[10] = "InfoNotes.Help";
+            _typeNameTable[11] = "InfoNotes.MainPage";
+            _typeNameTable[12] = "InfoNotes.SettingsPage";
+            _typeNameTable[13] = "InfoNotes.ViewNotes";
 
-            _typeTable = new global::System.Type[9];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::InfoNotes.AddNote);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::InfoNotes.ContactUs);
-            _typeTable[4] = typeof(global::InfoNotes.EditNote);
-            _typeTable[5] = typeof(global::InfoNotes.Help);
-            _typeTable[6] = typeof(global::InfoNotes.MainPage);
-            _typeTable[7] = typeof(global::InfoNotes.SettingsPage);
-            _typeTable[8] = typeof(global::InfoNotes.ViewNotes);
+            _typeTable[3] = typeof(global::InfoNotes.Common.NavigationHelper);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[5] = typeof(global::InfoNotes.Common.ObservableDictionary);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::System.String);
+            _typeTable[8] = typeof(global::InfoNotes.ContactUs);
+            _typeTable[9] = typeof(global::InfoNotes.EditNote);
+            _typeTable[10] = typeof(global::InfoNotes.Help);
+            _typeTable[11] = typeof(global::InfoNotes.MainPage);
+            _typeTable[12] = typeof(global::InfoNotes.SettingsPage);
+            _typeTable[13] = typeof(global::InfoNotes.ViewNotes);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -180,12 +190,20 @@ namespace InfoNotes.InfoNotes_XamlTypeInfo
         }
 
         private object Activate_0_AddNote() { return new global::InfoNotes.AddNote(); }
-        private object Activate_3_ContactUs() { return new global::InfoNotes.ContactUs(); }
-        private object Activate_4_EditNote() { return new global::InfoNotes.EditNote(); }
-        private object Activate_5_Help() { return new global::InfoNotes.Help(); }
-        private object Activate_6_MainPage() { return new global::InfoNotes.MainPage(); }
-        private object Activate_7_SettingsPage() { return new global::InfoNotes.SettingsPage(); }
-        private object Activate_8_ViewNotes() { return new global::InfoNotes.ViewNotes(); }
+        private object Activate_5_ObservableDictionary() { return new global::InfoNotes.Common.ObservableDictionary(); }
+        private object Activate_8_ContactUs() { return new global::InfoNotes.ContactUs(); }
+        private object Activate_9_EditNote() { return new global::InfoNotes.EditNote(); }
+        private object Activate_10_Help() { return new global::InfoNotes.Help(); }
+        private object Activate_11_MainPage() { return new global::InfoNotes.MainPage(); }
+        private object Activate_12_SettingsPage() { return new global::InfoNotes.SettingsPage(); }
+        private object Activate_13_ViewNotes() { return new global::InfoNotes.ViewNotes(); }
+        private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
+        {
+            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
+            var newKey = (global::System.String)key;
+            var newItem = (global::System.Object)item;
+            collection.Add(newKey, newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -200,6 +218,8 @@ namespace InfoNotes.InfoNotes_XamlTypeInfo
             case 0:   //  InfoNotes.AddNote
                 userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_AddNote;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -212,44 +232,83 @@ namespace InfoNotes.InfoNotes_XamlTypeInfo
                 xamlType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  InfoNotes.ContactUs
-                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_ContactUs;
+            case 3:   //  InfoNotes.Common.NavigationHelper
+                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  InfoNotes.EditNote
-                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_EditNote;
+            case 4:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  InfoNotes.Common.ObservableDictionary
+                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_5_ObservableDictionary;
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  InfoNotes.Help
+            case 6:   //  Object
+                xamlType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  String
+                xamlType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  InfoNotes.ContactUs
                 userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Help;
+                userType.Activator = Activate_8_ContactUs;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  InfoNotes.MainPage
+            case 9:   //  InfoNotes.EditNote
                 userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_MainPage;
+                userType.Activator = Activate_9_EditNote;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  InfoNotes.SettingsPage
+            case 10:   //  InfoNotes.Help
                 userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_SettingsPage;
+                userType.Activator = Activate_10_Help;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  InfoNotes.ViewNotes
+            case 11:   //  InfoNotes.MainPage
                 userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_ViewNotes;
+                userType.Activator = Activate_11_MainPage;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  InfoNotes.SettingsPage
+                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_SettingsPage;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  InfoNotes.ViewNotes
+                userType = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_ViewNotes;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -258,11 +317,169 @@ namespace InfoNotes.InfoNotes_XamlTypeInfo
         }
 
 
+        private object get_0_AddNote_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.AddNote)instance;
+            return that.NavigationHelper;
+        }
+        private object get_1_AddNote_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.AddNote)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_2_ContactUs_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.ContactUs)instance;
+            return that.NavigationHelper;
+        }
+        private object get_3_ContactUs_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.ContactUs)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_4_EditNote_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.EditNote)instance;
+            return that.NavigationHelper;
+        }
+        private object get_5_EditNote_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.EditNote)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_6_Help_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.Help)instance;
+            return that.NavigationHelper;
+        }
+        private object get_7_Help_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.Help)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_8_MainPage_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.MainPage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_9_MainPage_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.MainPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_10_SettingsPage_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.SettingsPage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_11_SettingsPage_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.SettingsPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_12_ViewNotes_NavigationHelper(object instance)
+        {
+            var that = (global::InfoNotes.ViewNotes)instance;
+            return that.NavigationHelper;
+        }
+        private object get_13_ViewNotes_DefaultViewModel(object instance)
+        {
+            var that = (global::InfoNotes.ViewNotes)instance;
+            return that.DefaultViewModel;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "InfoNotes.AddNote.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.AddNote");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_0_AddNote_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.AddNote.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.AddNote");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_1_AddNote_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.ContactUs.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.ContactUs");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_2_ContactUs_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.ContactUs.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.ContactUs");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_3_ContactUs_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.EditNote.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.EditNote");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_4_EditNote_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.EditNote.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.EditNote");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_5_EditNote_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.Help.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.Help");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_6_Help_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.Help.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.Help");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_7_Help_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.MainPage.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.MainPage");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_8_MainPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.MainPage.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.MainPage");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_9_MainPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.SettingsPage.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.SettingsPage");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_10_SettingsPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.SettingsPage.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.SettingsPage");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_11_SettingsPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.ViewNotes.NavigationHelper":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.ViewNotes");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "InfoNotes.Common.NavigationHelper");
+                xamlMember.Getter = get_12_ViewNotes_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "InfoNotes.ViewNotes.DefaultViewModel":
+                userType = (global::InfoNotes.InfoNotes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("InfoNotes.ViewNotes");
+                xamlMember = new global::InfoNotes.InfoNotes_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "InfoNotes.Common.ObservableDictionary");
+                xamlMember.Getter = get_13_ViewNotes_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            }
             return xamlMember;
         }
     }

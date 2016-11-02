@@ -16,30 +16,47 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <ScrollViewer>
-        <Grid Margin="20,20,20,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Style="{StaticResource HeaderTextBlockStyle}">
-                Info Notes
-            </TextBlock>
+    <Grid>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
 
-            <ListView x:ConnectionId='4' ItemsSource="{Binding}" Grid.Row="1" SelectionMode="None" IsItemClickEnabled="True"                               >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Title}" FontSize="26" TextWrapping="NoWrap" TextTrimming="WordEllipsis" />
-                            <TextBlock Text="{Binding Note}" TextWrapping="Wrap" />
-                        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Info Notes" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="notes" Margin="0,-6.5,0,6.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+        <Grid x:Name="ContentRoot" Margin="19,9.5,19,0" Grid.Row="1" >
+            <ListView x:ConnectionId='4' x:Name="lvNotes" HorizontalAlignment="Left" Height="491" VerticalAlignment="Top" Width="352"                             IsItemClickEnabled="True">
+                <ListView.Resources>
+                    <DataTemplate x:Key="DataTemplate">
+                        <Grid Height="92" Width="423">
+                            <Image x:Name="image" HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" Source="Assets/SmallLogo.scale-240.png"/>
+                            
+                            <StackPanel HorizontalAlignment="Left" Height="92" Margin="107,0,0,0" VerticalAlignment="Top" Width="276">
+                                <TextBlock x:Name="tbTitle" TextWrapping="Wrap" Text="{Binding Title}" Height="33" Margin="0,0,-0.167,0" Padding="0,5" Foreground="#FF0DFFF4" FontSize="20" FontFamily="Global User Interface"/>
+                                <TextBlock x:Name="tbContent" TextWrapping="Wrap" Text="{Binding Content}" Height="30" Margin="0,0,-0.167,0" Padding="0,5" Foreground="White" FontSize="18" FontFamily="Global User Interface"/>
+                            </StackPanel>
+                            <TextBlock x:Name="tbCategory" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Text="{Binding Category}" Height="33" Margin="280,0,-0.167,0" Padding="0,5" Foreground="#FFF90071" FontSize="16" FontFamily="Global User Interface"/>
+                        </Grid>
                     </DataTemplate>
+                </ListView.Resources>
+                <ListView.ItemTemplate>
+                    <StaticResource ResourceKey="DataTemplate"/>
                 </ListView.ItemTemplate>
-
             </ListView>
 
         </Grid>
-    </ScrollViewer>
+
+        <!--TODO: Content should be placed within the following grid-->
+    </Grid>
     
 </Page>
 
