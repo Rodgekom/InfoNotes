@@ -5,6 +5,7 @@ using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -24,7 +25,7 @@ namespace InfoNotes
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
         private Note note;
         private static double latitude, longitude;
-        private string thisPageUri;
+        private string tileId;
         public ViewNotes()
         {
             this.InitializeComponent();
@@ -100,6 +101,14 @@ namespace InfoNotes
             loadMap();
 
             var noteID = int.Parse(note.ID);
+            if (Windows.UI.StartScreen.SecondaryTile.Exists(note.ID))
+            {
+                btnPin.Icon = new SymbolIcon(Symbol.UnPin);
+            }
+            else
+            {
+                btnPin.Icon = new SymbolIcon(Symbol.Pin);
+            }
        }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
@@ -112,18 +121,29 @@ namespace InfoNotes
 
         }
 
-        private void btnPin_Click(object sender, RoutedEventArgs e)
+        private async void btnPin_Click(object sender, RoutedEventArgs e)
         {
-            SecondaryTile tileData = new SecondaryTile()
+            tileId = note.ID;
+            SecondaryTile tile = (await SecondaryTile.FindAllAsync()).FirstOrDefault((t) => t.TileId == tileId);
+            if (tile != null)
             {
-                TileId = note.ID,
-                DisplayName = note.Title,
-                Arguments = note.Content
-            };
-            tileData.VisualElements.Square150x150Logo = new Uri("ms-appx:///Assets/tile.png");
-            tileData.VisualElements.ShowNameOnSquare150x150Logo = true;
-            tileData.RequestCreateAsync();    
-            btnPin.Icon = new SymbolIcon(Symbol.UnPin);
+                await tile.RequestDeleteAsync();
+                btnPin.Icon = new SymbolIcon(Symbol.Pin);
+                new MessageDialog("Tile removed successfully").ShowAsync();
+            }
+            else
+            {
+                SecondaryTile tileData = new SecondaryTile()
+                {
+                    TileId = note.ID,
+                    DisplayName = note.Title,
+                    Arguments = note.Content
+                };
+                tileData.VisualElements.Square150x150Logo = new Uri("ms-appx:///Assets/tile.png");
+                tileData.VisualElements.ShowNameOnSquare150x150Logo = true;
+                tileData.RequestCreateAsync();
+                btnPin.Icon = new SymbolIcon(Symbol.UnPin);
+            }
         }
 
         private void loadMap()

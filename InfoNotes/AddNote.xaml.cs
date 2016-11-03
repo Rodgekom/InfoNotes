@@ -27,7 +27,7 @@ namespace InfoNotes
     public sealed partial class AddNote : Page
     {
         private Geolocator geolocator;
-        private string latitude, longitude, user = "91778-91678";
+        private string latitude, longitude, user = "91778-91678-91680";
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
         private Note note = new Note();
@@ -110,18 +110,16 @@ namespace InfoNotes
                 note.Latitude = latitude;
                 note.Longitude = longitude;
                 note.User = user;
-                Note noteRes = Proxy.postNote(note).Result;
-                new MessageDialog("Note added successfully").ShowAsync();
-                Frame.Navigate(typeof(MainPage));
+                var noteRes = Proxy.postNote(note).Result;
 
-                /*if (noteRes != null)
+                if (noteRes != null)
                 {
                     Frame.Navigate(typeof(MainPage));
                 }
                 else
                 {
                     new MessageDialog("Failed to add note").ShowAsync();
-                }*/
+                }
             }
             else
             {

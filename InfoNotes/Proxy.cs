@@ -9,7 +9,7 @@ namespace InfoNotes
     public class Proxy
     {
         private const string URL = "http://apinotes.azurewebsites.net/";
-        private static string user = "91778-91678";
+        private static string user = "91778-91678-91680";
         public static async Task<Note> postNote(Note note)
         {
             var client = new RestClient { BaseUrl = URL };
