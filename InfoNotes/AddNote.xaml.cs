@@ -111,15 +111,19 @@ namespace InfoNotes
                 note.Longitude = longitude;
                 note.User = user;
                 Note noteRes = Proxy.postNote(note).Result;
-                if (noteRes != null)
+                new MessageDialog("Note added successfully").ShowAsync();
+                Frame.Navigate(typeof(MainPage));
+
+                /*if (noteRes != null)
                 {
-                    Frame.GoBack();
+                    Frame.Navigate(typeof(MainPage));
                 }
                 else
                 {
                     new MessageDialog("Failed to add note").ShowAsync();
-                }
-            }else
+                }*/
+            }
+            else
             {
                 new MessageDialog("Please fill all the fields").ShowAsync();
             }

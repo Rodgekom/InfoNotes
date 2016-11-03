@@ -38,7 +38,7 @@
             <TextBlock TextWrapping="Wrap" Text="Description" FontSize="24" Foreground="#FF34FBF2"/>
             <TextBlock x:Name="tbDescription" TextWrapping="Wrap" Text="{Binding Content}" FontSize="22" Height="182" Margin="0,0,-0.167,0"/>
         </StackPanel>
-        <Maps:MapControl x:Name="myMap" HorizontalAlignment="Left" Margin="0,327.667,-10,0" Grid.Row="1" VerticalAlignment="Top" Height="169" Width="400"/>
+        <Maps:MapControl x:Name="myMap" HorizontalAlignment="Left" Margin="0,327.667,-10,0" Grid.Row="1" VerticalAlignment="Top" Height="169" Width="400" MapServiceToken="AkivQ7h2KQ-ow_HHk4EVx-FZG1vWM2lsusJeSC7oHGqr-OiSdFp_isjob_6nv721"/>
     </Grid>
 </Page>
 

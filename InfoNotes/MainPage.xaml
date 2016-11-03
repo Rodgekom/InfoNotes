@@ -38,7 +38,7 @@
                 <ListView.Resources>
                     <DataTemplate x:Key="DataTemplate">
                         <Grid Height="92" Width="423">
-                            <Image x:Name="image" HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" Source="Assets/SmallLogo.scale-240.png"/>
+                            <Image x:Name="image" HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" Source="Assets/note.png"/>
                             
                             <StackPanel HorizontalAlignment="Left" Height="92" Margin="107,0,0,0" VerticalAlignment="Top" Width="276">
                                 <TextBlock x:Name="tbTitle" TextWrapping="Wrap" Text="{Binding Title}" Height="33" Margin="0,0,-0.167,0" Padding="0,5" Foreground="#FF0DFFF4" FontSize="20" FontFamily="Global User Interface"/>

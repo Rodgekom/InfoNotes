@@ -1,23 +1,15 @@
 ﻿using InfoNotes.Common;
 using InfoNotes.Models;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage.Streams;
+using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Maps;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace InfoNotes
@@ -32,6 +24,7 @@ namespace InfoNotes
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
         private Note note;
         private static double latitude, longitude;
+        private string thisPageUri;
         public ViewNotes()
         {
             this.InitializeComponent();
@@ -105,7 +98,9 @@ namespace InfoNotes
             }
 
             loadMap();
-        }
+
+            var noteID = int.Parse(note.ID);
+       }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedFrom(e);
@@ -119,7 +114,16 @@ namespace InfoNotes
 
         private void btnPin_Click(object sender, RoutedEventArgs e)
         {
-
+            SecondaryTile tileData = new SecondaryTile()
+            {
+                TileId = note.ID,
+                DisplayName = note.Title,
+                Arguments = note.Content
+            };
+            tileData.VisualElements.Square150x150Logo = new Uri("ms-appx:///Assets/tile.png");
+            tileData.VisualElements.ShowNameOnSquare150x150Logo = true;
+            tileData.RequestCreateAsync();    
+            btnPin.Icon = new SymbolIcon(Symbol.UnPin);
         }
 
         private void loadMap()
@@ -127,7 +131,7 @@ namespace InfoNotes
             Geopoint centerPoint = new Geopoint(new BasicGeoposition()
             { Latitude = latitude, Longitude = longitude }, 0);
             myMap.Center = centerPoint;
-            myMap.ZoomLevel = 8;
+            myMap.ZoomLevel = 16;
             MapIcon mapIcon = new MapIcon();
             mapIcon.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/map-marker-hi.png"));
             mapIcon.Location = centerPoint;

@@ -46,12 +46,25 @@
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\packages\Microsoft.Net.Http.2.2.22\lib\wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\infonote-logo.scale-100.png">
+      <PackagePath>Assets\infonote-logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\infonote-splash.scale-240.png">
+      <PackagePath>Assets\infonote-splash.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\map-marker-hi.png">
       <PackagePath>Assets\map-marker-hi.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\note.png">
+      <PackagePath>Assets\note.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
@@ -59,7 +72,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Square150x150Logo.scale-240.png">
+      <PackagePath>Assets\Square150x150Logo.scale-240.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
@@ -68,6 +83,9 @@
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\tile.png">
+      <PackagePath>Assets\tile.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Almodad\projects\Visual studio 2015\InfoNotes\InfoNotes\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>

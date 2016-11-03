@@ -10,6 +10,16 @@ namespace InfoNotes.Models
 {
     public class Note : INotifyPropertyChanged
     {
+        private string _id;
+        public string ID
+        {
+            get { return _id; }
+            set
+            {
+                this.SetProperty(ref this._id, value);
+            }
+        }
+
         private string _title;
         public string Title
         {
